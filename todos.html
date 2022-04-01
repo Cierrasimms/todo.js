@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todos Vue.js</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="todos.js" defer></script>
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <div id="app">
+      {{ message }} (count: {{
+        todos.length}})
+        <h1>
+          <button v-on:click = "addToDos()">Add Todo</button>
+          <button v-on:click = "loadToDos()">Get my Todos</button>
+        </h1>
+    <div v-for = "todo in todos">
+       <h3>{{ todo.title }} </h3>
+       <p> {{ todo.completed}} </p>
+    </div> 
+    </div>
+  </body>
+</html>
