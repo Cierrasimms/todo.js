@@ -7,6 +7,9 @@ var App = {
       todos: [],
     };
   },
+  mounted: function () {
+    this.loadToDos();
+  },
   methods: {
     loadToDos: function () {
       axios.get("https://jsonplaceholder.typicode.com/todos").then((response) => {
@@ -18,8 +21,8 @@ var App = {
       axios
         .post("https://jsonplaceholder.typicode.com/todos", {
           userId: 1,
-          title: "Sleep",
-          completed: true,
+          title: "eat",
+          completed: false,
         })
         .then((response) => {
           console.log(response.data);

@@ -14,11 +14,10 @@
         todos.length}})
         <h1>
           <button v-on:click = "addToDos()">Add Todo</button>
-          <button v-on:click = "loadToDos()">Get my Todos</button>
         </h1>
     <div v-for = "todo in todos">
        <h3>{{ todo.title }} </h3>
-       <p> {{ todo.completed}} </p>
+       <p> Task Completed: {{ todo.completed}} </p>
     </div> 
     </div>
   </body>

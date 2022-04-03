@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="products.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+    <div id="app">
+      {{ message }}
+<div> 
+  <button v-on:click = "loadProducts()">Load All Products</button>
+  <button v-on:click = "addProducts()">Add Product</button>
+  <button v-on:click = "updateProducts()">Update Product</button>
+  <div v-for = "product in products">
+    <h3>{{ products }} </h3>
+  
+  </div>
+    </div>
+  </body>
+</html>
